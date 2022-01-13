@@ -31,8 +31,8 @@ for(i in 1:nrow(sp.df)){sp.matrix[rownames(sp.matrix)==sp.df[i,1],colnames(sp.ma
 
 ## create matrix with immediate kin and spouses, and then create distance matrix from this
 both <- imm + sp.matrix
-net <- igraph::graph_from_adjacency_matrix(both)
-aff_length <- distances(net)
+net <- igraph::graph_from_adjacency_matrix(both, mode = "undirected", weighted = NULL)
+aff_length <- igraph::distances(net, mode = "all")
 
 ## recode distance matrix to reflect affinal relatedness (so, spouses = 0.5, and all steps from there halve each time)
 aff <- apply(aff_length, 1, function(x) 2^-x)

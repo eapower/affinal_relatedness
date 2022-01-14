@@ -37,3 +37,8 @@ aff_length <- igraph::distances(net, mode = "all")
 ## recode distance matrix to reflect affinal relatedness (so, spouses = 0.5, and all steps from there halve each time)
 aff <- apply(aff_length, 1, function(x) 2^-x)
 aff <- aff - gen
+
+## Make sure that all relationships are accounted for in both the affinal and genetic relatedness inputs. 
+## i.e., make sure all sets of parents appear in the partnerships file, unless you explicitly don't want them
+## Not doing this (or purposefully censoring some, as for divorce) could potentially result in *negative* values, given the subtraction above
+## Assuming that you may have only partial coverage of more distant relatedness, you may want to censor both matrices below some threshold (e.g., 0.125)

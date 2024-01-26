@@ -12,6 +12,6 @@ It assumes as input:
 
 This was inspired by [Ed Hagen's earlier work](https://github.com/grasshoppermouse/descent) (see the [Descent Shiny App](https://grasshoppermouse.shinyapps.io/descent/)). 
 
-Thanks also to Jonathan Cardoso Silva and other on Twitter for suggestions! This was something Elspeth Ready and I were working around for an earlier publication (see [https://github.com/eapower/Kinship](https://github.com/eapower/Kinship)). 
+Thanks also to Jonathan Cardoso Silva and others on Twitter for suggestions! This was something Elspeth Ready and I were working around for an earlier publication (see [https://github.com/eapower/Kinship](https://github.com/eapower/Kinship)). 
 
 
